@@ -17,8 +17,8 @@ class _CalcImcState extends State<CalcImc> {
           "Calculadora de Imc",
         ),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(174, 62,142,
-          134,
+        backgroundColor: const Color.fromARGB(255, 61,66,
+          75,
         ),
         actions: [
           IconButton(
@@ -28,60 +28,77 @@ class _CalcImcState extends State<CalcImc> {
         ],
       ),
       backgroundColor: Colors.white,
-      body: Container(
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Padding(
-                  padding: EdgeInsets.all(32),
-                  child: Image.asset(
-                    "images/logo01.png",
-                    height: 200,
-                    width: 200,
-                  )),
+      body:SingleChildScrollView(
+    child: Container(
+    child: Column(
+    crossAxisAlignment: CrossAxisAlignment.stretch,
+    children: <Widget>[
+    Padding(
+    padding: EdgeInsets.all(32),
+    child: Image.asset(
+    "images/imc.png",
+    height: 200,
+    width: 200,
 
-              TextField(
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: "Peso (KG)",
-                  labelStyle: TextStyle(color: Colors.grey),
-                ),
-                textAlign: TextAlign.start,
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w800),
-              ),
+    )),
 
-              TextField(
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                    labelText: "Altura (CM)",
-                    labelStyle: TextStyle(color: Colors.grey)),
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w800),
-              ),
-           Container(
-             height: 50,
-           
-             child: ElevatedButton(
-               onPressed: (){},
-               child: Text('Calcular',style: TextStyle(
-                   color: Colors.white,
-                   fontSize: 20,
-                   fontWeight: FontWeight.w700
-               ),),
-               style: ElevatedButton.styleFrom(
-                   backgroundColor:Color.fromARGB(174,62,142,134,
-                   )),
-             )
-           )
-            ]
-              )
+     const TextField(
+    keyboardType: TextInputType.number,
+    decoration: InputDecoration(
+    labelText: "Peso (KG)",
+    labelStyle: TextStyle(color: Colors.black),
     ),
+    textAlign: TextAlign.start,
+    style: TextStyle(
+    color: Colors.black,
+    fontSize: 18,
+    fontWeight: FontWeight.normal),
+    ),
+     const TextField(
+    keyboardType: TextInputType.number,
+    decoration: InputDecoration(
+    labelText: "Altura (CM)",
+    labelStyle: TextStyle(color: Colors.black)),
+    textAlign: TextAlign.center,
+    style: TextStyle(
+    color: Colors.black,
+    fontSize: 18,
+    fontWeight: FontWeight.normal
+    ),
+    ),
+    SizedBox(
+    height: 50,
+    child: Padding(
+      padding: const EdgeInsets.only(top:  10),
+      child: ElevatedButton(
+      onPressed: (){},
+      style: ElevatedButton.styleFrom(
+      backgroundColor:Color.fromARGB(255, 61,66,
+          75
+      )),
+      child: const Text('Calcular',style: TextStyle(
+      color: Colors.white,
+      fontSize: 20,
+      fontWeight: FontWeight.w700
+      ),
+      ),
+      ),
+    )
+    ),
+   Padding(padding:
+   EdgeInsets.only(top: 20),
+     child: Text('Info',
+    textAlign:TextAlign.center ,
+    style: TextStyle(color: Colors.black,
+    fontSize: 25
+    ,)
+    ,)
+   )
+    ]
+    )
+
+      )
+      ),
         );
   }
 }
