@@ -14,7 +14,7 @@ class _CalcImcState extends State<CalcImc> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Calculadora de Imc",
+          "IMC",
         ),
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 61,66,
